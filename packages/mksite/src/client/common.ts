@@ -1,0 +1,1 @@
+export { onPageView } from './init'

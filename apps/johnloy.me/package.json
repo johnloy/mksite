@@ -1,0 +1,24 @@
+{
+  "name": "johnloy.me",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "astro dev --experimental-integrations",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "private": true,
+  "dependencies": {
+    "@astrojs/lit": "^0.1.4",
+    "@webcomponents/template-shadowroot": "^0.1.0",
+    "astro": "^1.0.0-beta.40",
+    "lit": "^2.2.5",
+    "mksite": "*",
+    "netlify-cli": "^10.5.1"
+  },
+  "devDependencies": {
+    "postcss-jit-props": "^1.0.7",
+    "typescript": "^4.6.4"
+  }
+}

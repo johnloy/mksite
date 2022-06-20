@@ -1,0 +1,19 @@
+{
+  "test": ".*.ts$",
+  "jsc": {
+    "parser": {
+      "syntax": "typescript",
+      "decorators": true,
+      "dynamicImport": true
+    },
+    "keepClassNames": true,
+    "baseUrl": "./src",
+    "preserveAllComments": true,
+    "target": "es2019",
+    "transform": null
+  },
+  "module": {
+    "type": "es6",
+    "ignoreDynamic": true
+  }
+}

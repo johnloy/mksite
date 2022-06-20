@@ -1,0 +1,38 @@
+---
+import { MainLayout } from 'mksite/layouts'
+import { Markdown } from 'astro/components'
+
+const pageTitle = 'Toolkit'
+
+const layoutProps = {
+  pageTitle
+}
+---
+
+<script>
+  import '@assets/pages/toolkit'
+</script>
+
+<MainLayout {...layoutProps}>
+  <h1>{pageTitle}</h1>
+
+  <Markdown>
+    - Lit
+    - Astro
+    - Vite
+    - Rollup
+    - esbuild
+    - Nano Stores
+    - Swup
+    - Open Props
+    - Mavo
+    - PostCSS
+    - PurgeCSS
+    - Rehype
+    - Remark
+    - Netlify
+    - Vanilla SWR
+    - Visual Studio Code Extensions
+      - Astro
+  </Markdown>
+</MainLayout>

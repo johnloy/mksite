@@ -1,0 +1,17 @@
+---
+import { MainLayout } from 'mksite/layouts'
+
+const pageTitle = 'About'
+
+const layoutProps = {
+  pageTitle
+}
+---
+
+<script>
+  import '@assets/pages/about'
+</script>
+
+<MainLayout {...layoutProps}>
+  <h1>{pageTitle}</h1>
+</MainLayout>

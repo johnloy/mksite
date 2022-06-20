@@ -1,0 +1,79 @@
+{
+  // Only use TS for site source files
+  "include": ["src/**/*"],
+
+  "compilerOptions": {
+
+    // Output modern JavaScript
+    // =================================
+
+    // Support dynamic import() and import.meta
+    "module": "ES2020",
+
+    // Enable top-level await and other modern ESM features.
+    "target": "ESNext",
+
+    // Ensure TS loads types for modern stuff
+    // See:
+    // - https://www.typescriptlang.org/tsconfig#lib
+    // - https://caniuse.com/sr_es12
+    // - https://github.com/microsoft/TypeScript/blob/main/lib/lib.dom.iterable.d.ts
+    "lib": ["ES2021", "DOM", "DOM.Iterable", "WebWorker"],
+
+    // Use decorators, cuz they make Lit nicer
+    "experimentalDecorators": true,
+
+    // Don't cause a problem for Lit when using class fields
+    // See:
+    // - https://lit.dev/docs/components/decorators/#avoiding-issues-with-class-fields
+    // - https://lit.dev/docs/tools/publishing/#compiling-with-typescript
+    // - https://lit.dev/docs/components/decorators/#decorators-typescript
+    "useDefineForClassFields": false,
+
+    // Just work, please. Thx.
+    // =================================
+
+    // Let me be a maverick if I wanna
+    "allowJs": true,
+
+    // Use node-style module resolution, cuz it's what I expect
+    "moduleResolution": "node",
+
+    // Enable JSON imports, cuz it's useful.
+    "resolveJsonModule": true,
+
+    // Don't whine when importing a CJS module without a exports.default
+    // e.g. import React from 'react'
+    "allowSyntheticDefaultImports": true,
+
+    // Keep me from doing stupid stuff
+    // =================================
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "isolatedModules": true,
+
+    // Make import paths not suck
+    // =================================
+
+    // Allow src import specifiers relative to this dir.
+    // e.g. import logo from 'public/logo.svg'
+    "baseUrl": ".",
+
+    // Abolish relative path grossness.
+    "paths": {
+      "@pages/*": ["src/pages/*"],
+      "@layouts/*": ["src/layouts/*"],
+      "@components/*": ["src/components/*"],
+      "@assets/*": ["src/assets/*"],
+    },
+
+    // Support types for import.meta and asset imports ala Vite
+    // See: https://vitejs.dev/guide/assets.html
+    "types": ["vite/client"]
+  }
+}

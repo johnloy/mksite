@@ -1,0 +1,6 @@
+@import url('./util.css');
+@import url('./lib/animations.css');
+
+p {
+  color: var(--blue-7);
+}

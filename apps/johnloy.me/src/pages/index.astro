@@ -1,0 +1,28 @@
+---
+import { MainLayout } from 'mksite/layouts'
+import '@components/jl-header/jl-header'
+import jlHeaderCritCss from '@components/jl-header/jl-header.critical.css?url'
+
+const pageTitle = 'Home'
+
+const layoutProps = {
+  pageTitle
+}
+---
+
+<style>
+</style>
+
+<script>
+  import '@assets/pages/home'
+</script>
+
+<MainLayout {...layoutProps}>
+  <jl-header customword="yo" client:load>
+    <link slot="crit-styles" rel="stylesheet" href={jlHeaderCritCss} />
+    <p slot="initial-content">Initial content</p>
+  </jl-header>
+  <h1>{pageTitle}</h1>
+  <p>Nope</p>
+  <jl-header customword="yo" client:load></jl-header>
+</MainLayout>
